@@ -911,7 +911,7 @@ describe("TUI PTY real backends", () => {
           );
         }
         await fixture.run.write("/side\r");
-        await fixture.run.waitForOutput("Usage: /btw [side question]");
+        await fixture.run.waitForOutput("Usage: /btw <side question>");
         expect(fixture.mockModel.requests()).toHaveLength(0);
 
         await fixture.run.write("send the local PTY smoke response\r");
